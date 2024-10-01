@@ -1,0 +1,16 @@
+2024-10-01 17:45:35.576178-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM CLIENT T [*]PRODUCT"
+Syntax error in SQL statement "SELECT * FROM CLIENT T [*]PRODUCT"; SQL statement:
+SELECT * FROM CLIENT T PRODUCT [42000-224]
+2024-10-01 17:46:00.077962-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]SALE"; se esperaba "SAVEPOINT, SCRIPT, SHUTDOWN"
+Syntax error in SQL statement "[*]SALE"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SALE [42001-224]
+2024-10-01 17:46:04.736107-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "[*]SALE SALE PRODUCT"; se esperaba "SAVEPOINT, SCRIPT, SHUTDOWN"
+Syntax error in SQL statement "[*]SALE SALE PRODUCT"; expected "SAVEPOINT, SCRIPT, SHUTDOWN"; SQL statement:
+SALE SALE PRODUCT [42001-224]
+2024-10-01 17:46:34.703649-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SALEPRODUCT" no encontrada
+Table "SALEPRODUCT" not found; SQL statement:
+SELECT * FROM SALEPRODUCT [42102-224]
