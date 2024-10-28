@@ -8,6 +8,9 @@ import edu.coderhouse.example.entity.Client;
 import edu.coderhouse.example.entity.Sale;
 import org.springframework.boot.CommandLineRunner;
 import edu.coderhouse.example.service.DaoFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +50,13 @@ public class ExampleApplication implements CommandLineRunner   {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+	@Configuration
+	public class AppConfig {
+		@Bean
+		public RestTemplate restTemplate() {
+			return new RestTemplate();
 		}
 	}
 }

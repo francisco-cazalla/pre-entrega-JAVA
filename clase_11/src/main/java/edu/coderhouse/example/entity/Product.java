@@ -13,7 +13,7 @@ public class Product {
     public Product(String name, int stock, int price) {
         this.name = name;
         this.stock = stock;
-        this.price = price;
+        this.price = (double) price;
 
     }
 
@@ -38,7 +38,15 @@ public class Product {
     @Column(name = "PRICE")
     @Getter
     @Setter
-    private int price;
+    private Double price;
+
+    public Long getId() { return (long) id; }
+    public String getNombre() { return name; }
+    public void setNombre(String nombre) { this.name = nombre; }
+    public Double getPrecio() { return (double) price; }
+    public void setPrecio(Double precio) { this.price = precio; }
+    public Integer getStock() { return stock; }
+    public void setStock(Integer stock) { this.stock = stock; }
 
 
     //@ManyToOne(fetch = FetchType.LAZY)
