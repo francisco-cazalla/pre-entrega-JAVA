@@ -21,8 +21,12 @@ public class ComprobanteService {
     @Autowired
     private ProductoRepopsitory productoRepository;
 
+    private final RestTemplate restTemplate;
     @Autowired
-    private RestTemplate restTemplate;
+    public ComprobanteService (RestTemplate restTemplate){
+        this.restTemplate = restTemplate;
+    }
+
 
     // Método para obtener la hora desde la API
     private LocalDateTime obtenerFechaHoraDesdeAPI() {
